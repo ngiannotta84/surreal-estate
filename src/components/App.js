@@ -17,6 +17,7 @@ const App = () => {
     </div>
   );
 };
-/* it is Navabar that is displaying the links the Routes are just defing the paths that they need to follow */
+/* it is Navabar that is displaying the links the Routes are just defing the paths that they need 
+to follow and then diaplyin the actual components */
 
 export default App;
