@@ -24,10 +24,11 @@ const AddProperty = () => {
   };
   return (
     <div className="add-property">
-      Add Property Page
+      <h2>Add Property Page</h2>
       <form onSubmit={handleAddProperty}>
         <div className="form-field">
           <label htmlFor="title">
+            <span>Title</span>
             <input
               id="title"
               name="title"
@@ -38,7 +39,7 @@ const AddProperty = () => {
         </div>
         <div className="form-field">
           <label htmlFor="city">
-            City
+            <span>City</span>
             <select
               id="city"
               name="city"
@@ -55,7 +56,7 @@ const AddProperty = () => {
         </div>
         <div className="form-field">
           <label htmlFor="type">
-            House type
+            <span>House Type</span>
             <select
               id="type"
               name="type"
@@ -74,7 +75,7 @@ const AddProperty = () => {
         </div>
         <div className="form-field">
           <label htmlFor="bedrooms">
-            Bedrooms
+            <span>Bedrooms</span>
             <input
               id="bedrooms"
               name="bedrooms"
@@ -88,7 +89,7 @@ const AddProperty = () => {
         </div>
         <div className="form-field">
           <label htmlFor="bathrooms">
-            Bathrooms
+            <span>Bathrooms</span>
             <input
               id="bathrooms"
               name="bathrooms"
@@ -102,7 +103,7 @@ const AddProperty = () => {
         </div>
         <div className="form-field">
           <label htmlFor="price">
-            Price
+            <span>Price</span>
             <input
               id="price"
               name="price"
@@ -117,7 +118,7 @@ const AddProperty = () => {
         </div>
         <div className="form-field">
           <label htmlFor="email">
-            email
+            <span>email</span>
             <input
               id="email"
               name="email"
