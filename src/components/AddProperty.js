@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import sendData from "../request/request";
 import "../styles/add-property.css";
 
 const AddProperty = () => {
@@ -16,12 +17,13 @@ const AddProperty = () => {
   const [fields, setFields] = useState(intialState.fields);
   const handleAddProperty = (event) => {
     event.preventDefault();
+    sendData(fields);
     // eslint-disable-next-line no-console
     console.log(fields);
   };
   const handleFieldChange = (e) => {
     setFields({ ...fields, [e.target.name]: e.target.value });
-  };
+  }; /* [e.target.name] is basically a key */
   return (
     <div className="add-property">
       <h2>Add Property Page</h2>
@@ -81,7 +83,6 @@ const AddProperty = () => {
               name="bedrooms"
               placeholder="Bedrooms"
               type="number"
-              min="1"
               value={fields.bedrooms}
               onChange={handleFieldChange}
             />
@@ -95,7 +96,6 @@ const AddProperty = () => {
               name="bathrooms"
               placeholder="Bathrooms"
               type="number"
-              min="1"
               value={fields.bathrooms}
               onChange={handleFieldChange}
             />

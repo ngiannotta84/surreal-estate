@@ -6,7 +6,12 @@ import logo from "../assets/logo.png";
 const Navbar = () => {
   return (
     <div className="navbar">
-      <img className="logo" src={logo} alt="logo of Surreal Estate" />
+      <img
+        className="logo"
+        data-test-Id="logo"
+        src={logo}
+        alt="logo of Surreal Estate"
+      />
       <ul className="navbar-links">
         <li className="navbar-links-item">
           <Link className="item" to="/">
