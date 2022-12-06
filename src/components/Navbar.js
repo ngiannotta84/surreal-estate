@@ -8,7 +8,7 @@ const Navbar = () => {
     <div className="navbar">
       <img
         className="logo"
-        data-test-Id="logo"
+        data-testid="logo"
         src={logo}
         alt="logo of Surreal Estate"
       />

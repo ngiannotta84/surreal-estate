@@ -1,25 +1,20 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import { render, screen } from "@testing-library/react";
-import App from "../components/App";
+import AddProperty from "../components/AddProperty";
 
-describe("App", () => {
+describe("AddProperty", () => {
   it("renders correctly", () => {
     const { asFragment } = render(
       <BrowserRouter>
-        <App />
+        <AddProperty />
       </BrowserRouter>
     );
     expect(asFragment()).toMatchSnapshot();
   });
-
-  it("renders Surreal Estate", () => {
-    render(
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    );
-    const linkElement = screen.getByText(/surreal estate/i);
-    expect(linkElement).toBeInTheDocument();
+  it("diplay the correct title", () => {
+    render(<AddProperty />);
+    const text = screen.getByText(/add property page/i);
+    expect(text).toBeInTheDocument();
   });
 });
